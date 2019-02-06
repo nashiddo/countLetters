@@ -1,29 +1,23 @@
-/* {
-  l: 1,
-  i: 2,
-  g: 1,
-  h: 4,
-  t: 2,
-  o: 2,
-  u: 2,
-  s: 2,
-  e: 3,
-  n: 1,
-}*/
+function countLetters(str){
+  str = str.split(' ').join("");
+  var objLetterCount = {};
+  //console.log(str);
+  //var obj = Object.assign({},str);
+  //3. for loop to count each letter
+  for (var i = 0; i < str.length; i++){
 
-function countLetters(string) {
-var count= {};
-for (var i=0; i<string.length;i++) {
-    var character = string.charAt(i);
-    if (count[character]) {
-       count[character]++;
-    } else {
-       count[character] = 1;
+  var letterCount = 0;
+
+    for (var j = 0; j < str.length; j++){
+      if (str[i] === str[j]){
+        letterCount += 1;
+      }
     }
+    objLetterCount[str[i]] = letterCount;
+
+  }
+  //console.log(objLetterCount)
+  return objLetterCount;
 }
 
-return count;
-}
-
-console.log(countLetters('lighthouse in the house'));
-
+console.log(countLetters("lighthouse in the house"));

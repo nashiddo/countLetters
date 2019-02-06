@@ -1,15 +1,15 @@
-/*var countLetters={};
-var repeats=[];
-str='lighthouse in the house';
-
-for(x = 0, length = str.length; x < length; x++){
-  var l = str.charAt(x);
-  countLetters[l]= (isNaN(countLetters[l]) ? 1 : countLetters[l]+1);
-
-
-}
-console.log(countLetters);
-*/
+/* {
+  l: 1,
+  i: 2,
+  g: 1,
+  h: 4,
+  t: 2,
+  o: 2,
+  u: 2,
+  s: 2,
+  e: 3,
+  n: 1,
+}*/
 
 function countLetters(string) {
 var count= {};
@@ -25,5 +25,5 @@ for (var i=0; i<string.length;i++) {
 return count;
 }
 
-countLetters('lighthouse in the house');
+console.log(countLetters('lighthouse in the house'));
 
